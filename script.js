@@ -89,3 +89,75 @@ let age = 20;
 let beverage = (age >= 21) ? "Beer" : "Juice";
 console.log(beverage);
 
+//Array 
+
+let arr=[[1.2],["a","b"]]
+console.log(arr)
+console.log(arr[1][1])
+
+arr[1][1]=3
+console.log(arr)
+console.log(arr.length)
+let fruits=["apple","grapes","banana"]
+//push()	Adds one or more elements to the end of an array	
+fruits.push("orange");
+console.log(fruits)
+
+// pop()	Removes the last element from an array	
+fruits.pop();
+console.log(fruits)
+
+// shift()	Removes the first element from an array	
+fruits.shift();
+console.log(fruits)
+
+// unshift()	Adds one or more elements to the beginning of an array	
+fruits.unshift("strawberry","watermelon");
+console.log(fruits)
+
+// slice()	Returns a shallow copy of a portion of an array	
+let citrus = fruits.slice(1,4);
+console.log(citrus)
+
+// splice()	Changes the contents of an array by removing or replacing elements	
+//splice(str,delet,add);
+
+fruits.splice(1, 1, "kiwi",'pear')
+console.log(fruits)
+//concat()	Merges two or more arrays and returns a new array	
+let allFruits = fruits.concat(citrus);
+console.log(allFruits)
+
+// map()	Creates a new array with the results of calling a function on every element in the original array	
+let lengths = fruits.map(fruit => fruit.length);
+console.log(lengths)
+// forEach()	Executes a provided function once for each array element
+// iterating over the elements of an array. It allows you to execute a provided function once for each element in the array
+fruits.forEach(fruit => console.log(fruit));
+// join()	Joins all elements of an array into a string	
+let fruitString = fruits.join("-");
+console.log(fruitString)
+
+
+//Use filter() to select specific elements based on a condition.
+let num=[1,2,3,4,5,6,7]
+let even=num.filter(n=>n%2==0);
+  console.log(even)
+//Use map() to transform each element in the array.
+let square=num.map(n=>n**3)
+console.log(square)
+//forEach
+let total = 0;
+
+num.forEach((num) => {
+    total += num;
+});
+
+console.log(total); 
+
+//reduce
+let s=num.reduce((acc,CurrentValue)=>{
+  return acc+CurrentValue
+},0)
+console.log(s)
+
